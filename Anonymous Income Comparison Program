@@ -1,0 +1,36 @@
+using System; //The only one namespace we're using in this program.
+
+    class Program //Gives the structure of the program.
+    {
+        static void Main() //Entry point of the program.
+        {
+
+        Console.WriteLine("Anonymous Income Comparison Program\n"); //Writing out the name of the program.
+        
+        // PERSON 1 INPUT
+        Console.WriteLine("Person 1\nHourly Rate:"); //Asking for input.
+        decimal p1RateDec = Decimal.Parse(Console.ReadLine()); //Converting input to decimal and storing it in a variable.
+        Console.WriteLine("Hours worked per week:"); //Asking for input.
+        decimal p1HoursDec = Decimal.Parse(Console.ReadLine()); //Converting input to decimal and storing it in a variable.
+
+        // PERSON 2 INPUT
+        Console.WriteLine("\nPerson 2\nHourly Rate:"); //Asking for input.
+        decimal p2RateDec = Decimal.Parse(Console.ReadLine()); //Converting input to decimal and storing it in a variable.
+        Console.WriteLine("Hours worked per week:"); //Asking for input.
+        decimal p2HoursDec = Decimal.Parse(Console.ReadLine()); //Converting input to decimal and storing it in a variable.
+
+        // RESULTS
+        decimal p1Salary = p1RateDec * p1HoursDec; //Carrying out the maths operation.
+        Console.WriteLine("\nAnnual Salary of Person 1:\n" + p1Salary.ToString()); //Converting back to string and writing out the results.
+
+        decimal p2Salary = p2RateDec * p2HoursDec; //Carrying out the maths operation.
+        Console.WriteLine("Annual Salary of Person 2:\n" + p2Salary.ToString()); //Converting back to string and writing out the results.
+
+        bool isP1More = p1Salary > p2Salary; //Carrying out the comparison operation and storing the result in a boolean.
+        Console.WriteLine("\nPerson 1 makes more money than Person 2:\n" + isP1More.ToString()); //Converting back to string and writing out the results.
+
+        Console.ReadLine(); //Prevent the console from closing, so we can read the result.
+
+
+    }
+    }
