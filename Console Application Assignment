@@ -1,0 +1,28 @@
+using System; //The only one namespace we're using in this program.
+
+    class Program //Gives the structure of the program.
+    {
+        static void Main() //Entry point of the program.
+        {
+        Console.WriteLine("Give me a number!"); //Asking for input.
+        string inputNo = Console.ReadLine(); //Storing the input as a string.
+        decimal inputConv = int.Parse(inputNo); //Converting to decimal to make sure it handles at least 9 digits.
+
+        decimal inputMultipl = inputConv * 50; // Carrying out the operation.
+        Console.WriteLine("Input times 50: " + inputMultipl.ToString()); //Homogenize the data types and write out the result to the console.
+
+        decimal inputAdd = inputConv + 25; // Carrying out the operation.
+        Console.WriteLine("Input plus 25: " + inputAdd.ToString()); //Homogenize the data types and write out the result to the console.
+
+        decimal inputDiv = inputConv / 12.5m; // Carrying out the operation.
+        Console.WriteLine("Input divided by 12.5: " + inputDiv.ToString()); //Homogenize the data types and write out the result to the console.
+
+        bool inputBoo = inputConv > 50; // Carrying out the operation.
+        Console.WriteLine("Is Input greater than 50? " + inputBoo.ToString()); //Homogenize the data types and write out the result to the console.
+
+        decimal inputMod = inputConv % 7; // Carrying out the operation.
+        Console.WriteLine("Remainder of Input divided by 7: " + inputMod.ToString()); //Homogenize the data types and write out the result to the console.
+
+        Console.ReadLine(); //Prevent the console from closing, so we can read the result.
+        }
+    }
