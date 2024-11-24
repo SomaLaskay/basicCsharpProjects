@@ -1,0 +1,36 @@
+using System; //The only one namespace we're using in this program.
+
+    class Program //Gives the structure of the program.
+    {
+        static void Main() //Entry point of the program.
+        {
+
+        // TITLE
+        Console.WriteLine("Car Insurance Application\n"); //Application Title
+
+        // INPUT
+        Console.WriteLine("What is your age?"); //Asking for input: Age
+        int age = Convert.ToInt32(Console.ReadLine()); //Converting and storing the answer
+
+        Console.WriteLine("\nHave you ever had a DUI? (Yes or No)"); //Asking for input: DUI
+        string haveDui = Console.ReadLine().ToLower(); //Converting and storing the answer
+
+        Console.WriteLine("\nHow many speeding tickets do you have?"); //Asking for input: Tickets
+        int tickets = Convert.ToInt32(Console.ReadLine()); //Converting and storing the answer
+
+        // EVALUATION
+        bool isAgeOK = age > 15; //Evaluating age
+        bool isDuiOK = haveDui != "yes"; //Evaluating DUIs
+        bool isTicketsOK = tickets < 4; //Evaluating tickets
+        bool qualified = isAgeOK && isDuiOK && isTicketsOK; //Evaluating qualification
+
+        // OUTPUT
+        Console.WriteLine("\nQualified?"); //Writing out the results
+        Console.WriteLine(qualified); 
+
+        Console.ReadLine();
+
+
+
+    }
+    }
