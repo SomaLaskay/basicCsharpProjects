@@ -1,0 +1,42 @@
+using System;
+using System.Diagnostics.Eventing.Reader;
+using System.Net;
+using System.Text; //The only one namespace we're using in this program.
+
+class Program //Gives the structure of the program.
+    {
+        static void Main() //Entry point of the program.
+        {
+
+        // INPUT
+        Console.WriteLine("What is your first name?"); //Asking for input 1
+        string fName = Console.ReadLine();
+
+        Console.WriteLine("What is your last name?"); //Asking for input 2
+        string lName = Console.ReadLine();
+
+        Console.WriteLine("What is your favourite food?"); //Asking for input 3
+        string food = Console.ReadLine();
+
+        // CONCAT + UPPER
+        Console.WriteLine("Nice to meet you, " + fName + " " + lName + "! So your favourite food is " + food.ToUpper() + "!");
+
+        // SB
+        StringBuilder greetBuilder = new StringBuilder(); //Constructing the StringBuilder
+
+        greetBuilder.Append("\n\tSomething"); //Appending the new SB
+        greetBuilder.Append("\nAnything"); //Appending the new SB
+        greetBuilder.Append("\nAlmost"); //Appending the new SB
+        greetBuilder.Append("\nEverything"); //Appending the new SB
+
+
+        Console.WriteLine(greetBuilder); //Displaying the result of the SB
+
+
+
+        Console.ReadLine(); //Keeping the window open, so you can read everything
+
+
+
+    }
+    }
